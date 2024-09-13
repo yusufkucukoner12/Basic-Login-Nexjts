@@ -17,6 +17,10 @@ export const authConfig = {
         if (isLoggedIn) return true;
         return false; 
       }
+      if(isOnHomepage) {
+        if (isLoggedIn) return true;
+        return false;
+      }
 
       // Avoid redirect loop if already on homepage
       if (isLoggedIn && !isOnHomepage) {
